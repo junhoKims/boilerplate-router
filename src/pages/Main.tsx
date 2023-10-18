@@ -1,5 +1,14 @@
+import { useNavigate } from "react-router-dom";
+
 const Main = () => {
-  return <div>Main</div>;
+  const navigate = useNavigate();
+
+  return (
+    <main>
+      <button onClick={() => navigate("/item")}>Item</button>
+      <button onClick={() => navigate("/settings")}>Settings</button>
+    </main>
+  );
 };
 
 export default Main;
