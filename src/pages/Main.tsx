@@ -5,7 +5,7 @@ const Main = () => {
 
   return (
     <main>
-      <button onClick={() => navigate("/item")}>Item</button>
+      <button onClick={() => navigate("/item/dZ42kein9Ccd")}>Item</button>
       <button onClick={() => navigate("/settings")}>Settings</button>
     </main>
   );
