@@ -1,5 +1,5 @@
 import { RouterProvider } from "react-router-dom";
-import routes from "@/libs/routes";
+import { routes } from "@/libs/react-router-dom";
 
 const Root = () => {
   return (

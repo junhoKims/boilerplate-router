@@ -1,10 +1,14 @@
+import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
-import GlobalErrorBoundary from "./components/GlobalErrorBoundary";
+import GlobalErrorBoundary from "@/components/GlobalErrorBoundary";
+import PageLoading from "@/components/PageLoading";
 
 function App() {
   return (
     <GlobalErrorBoundary>
-      <Outlet />
+      <Suspense fallback={<PageLoading />}>
+        <Outlet />
+      </Suspense>
     </GlobalErrorBoundary>
   );
 }

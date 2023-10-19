@@ -1,6 +1,6 @@
+import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import App from "@/App";
-import * as pages from "@/pages";
 
 const router = createBrowserRouter([
   {
@@ -9,33 +9,33 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <pages.Main />,
+        Component: lazy(() => import("@/pages/Main")),
       },
       {
         path: "/item/:itemId",
-        element: <pages.Item />,
+        Component: lazy(() => import("@/pages/Item/Item")),
         children: [
           {
             index: true,
-            element: <pages.Info />,
+            Component: lazy(() => import("@/pages/Item/pages/Info")),
           },
           {
             path: "review",
-            element: <pages.Review />,
+            Component: lazy(() => import("@/pages/Item/pages/Review")),
           },
           {
             path: "inquire",
-            element: <pages.Inquire />,
+            Component: lazy(() => import("@/pages/Item/pages/Inquire")),
           },
         ],
       },
       {
         path: "/settings",
-        element: <pages.Settings />,
+        Component: lazy(() => import("@/pages/Settings")),
       },
       {
         path: "*",
-        element: <pages.NotFound />,
+        Component: lazy(() => import("@/pages/NotFound")),
       },
     ],
   },
