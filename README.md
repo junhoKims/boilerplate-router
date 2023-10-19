@@ -30,5 +30,5 @@ loader나 error 등을 자체적으로 지원하는데, 이는 router 라이브�
 
 ## Next Todo
 
-- [ ] page 단위 code splitting
+- [x] page 단위 code splitting
 - [ ] vite ssr
