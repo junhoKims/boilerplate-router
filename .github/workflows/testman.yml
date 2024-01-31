@@ -3,7 +3,7 @@ name: testman
 on: [push]
 
 jobs:
-  run-unit-test:
+  only-test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Github Source
