@@ -1,10 +1,6 @@
-name: hello_world
+name: testman
 
-on:
-  pull_request:
-    branches:
-      - main
-    types: [opened, reopened, synchronize]
+on: [push]
 
 jobs:
   run-unit-test:
@@ -20,7 +16,7 @@ jobs:
 
       - name: Install dependencies
         run: yarn install
-
+t
       - name: Run tests
         run: yarn test
     
