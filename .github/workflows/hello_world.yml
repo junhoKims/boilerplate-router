@@ -1,0 +1,23 @@
+name: hello_world
+
+on:
+  pull_request:
+    branches:
+      - main
+    types: [opened, reopened, synchronize]
+
+jobs:
+  run-unit-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Github Source
+        uses: actions/checkout@v4
+
+      - name: Install node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18.18.2
+
+      - name: Run Echo krak
+        run: echo "krak"
+    
